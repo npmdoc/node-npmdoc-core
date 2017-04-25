@@ -1,0 +1,1894 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a>core (v2.0.11)</a>
+</h1>
+<h4>Core Libs</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core">module core</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>AbstractDecorator</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>CFMemcache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Class</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Compressor</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>ConnectionPool</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>CredentialsProvider</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>CursorQueryWorker</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>DecoratorChain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>DeviceDetector</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>EmptyLogger</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>ErrorEvent</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Event</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>EventDispatcher</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Headers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>JsonRpcAbstract</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>JsonRpcBatchRequest</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>JsonRpcBatchResponse</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>JsonRpcError</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>JsonRpcMethod</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>JsonRpcRequest</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>JsonRpcResponse</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Memcache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>MemcacheAdapter</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Memcached</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>MemcachedSocket</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Merge</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Message</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Net</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Pool</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Process</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>RbmqConfig</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>RbmqIncomingMessage</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>RbmqMessage</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Socket</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Sort</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">core.</span>Url</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.AbstractDecorator">module core.AbstractDecorator</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.AbstractDecorator.AbstractDecorator">
+            function <span class="apidocSignatureSpan">core.</span>AbstractDecorator
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.CFMemcache">module core.CFMemcache</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.CFMemcache.CFMemcache">
+            function <span class="apidocSignatureSpan">core.</span>CFMemcache
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Class">module core.Class</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Class.Class">
+            function <span class="apidocSignatureSpan">core.</span>Class
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Compressor">module core.Compressor</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Compressor.Compressor">
+            function <span class="apidocSignatureSpan">core.</span>Compressor
+            <span class="apidocSignatureSpan">(configuration)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.ConnectionPool">module core.ConnectionPool</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.ConnectionPool.ConnectionPool">
+            function <span class="apidocSignatureSpan">core.</span>ConnectionPool
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.CredentialsProvider">module core.CredentialsProvider</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.CredentialsProvider.CredentialsProvider">
+            function <span class="apidocSignatureSpan">core.</span>CredentialsProvider
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.CursorQueryWorker">module core.CursorQueryWorker</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.CursorQueryWorker.CursorQueryWorker">
+            function <span class="apidocSignatureSpan">core.</span>CursorQueryWorker
+            <span class="apidocSignatureSpan">(client)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.DecoratorChain">module core.DecoratorChain</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.DecoratorChain.DecoratorChain">
+            function <span class="apidocSignatureSpan">core.</span>DecoratorChain
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.DeviceDetector">module core.DeviceDetector</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.DeviceDetector.DeviceDetector">
+            function <span class="apidocSignatureSpan">core.</span>DeviceDetector
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.EmptyLogger">module core.EmptyLogger</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.EmptyLogger.EmptyLogger">
+            function <span class="apidocSignatureSpan">core.</span>EmptyLogger
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.ErrorEvent">module core.ErrorEvent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.ErrorEvent.ErrorEvent">
+            function <span class="apidocSignatureSpan">core.</span>ErrorEvent
+            <span class="apidocSignatureSpan">(type, data, code, message)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Event">module core.Event</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Event.Event">
+            function <span class="apidocSignatureSpan">core.</span>Event
+            <span class="apidocSignatureSpan">(type, data, target)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.EventDispatcher">module core.EventDispatcher</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.EventDispatcher.EventDispatcher">
+            function <span class="apidocSignatureSpan">core.</span>EventDispatcher
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Headers">module core.Headers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Headers.Headers">
+            function <span class="apidocSignatureSpan">core.</span>Headers
+            <span class="apidocSignatureSpan">(headers, normalize)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.JsonRpcAbstract">module core.JsonRpcAbstract</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.JsonRpcAbstract.JsonRpcAbstract">
+            function <span class="apidocSignatureSpan">core.</span>JsonRpcAbstract
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.JsonRpcBatchRequest">module core.JsonRpcBatchRequest</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.JsonRpcBatchRequest.JsonRpcBatchRequest">
+            function <span class="apidocSignatureSpan">core.</span>JsonRpcBatchRequest
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.JsonRpcBatchResponse">module core.JsonRpcBatchResponse</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.JsonRpcBatchResponse.JsonRpcBatchResponse">
+            function <span class="apidocSignatureSpan">core.</span>JsonRpcBatchResponse
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.JsonRpcError">module core.JsonRpcError</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.JsonRpcError.JsonRpcError">
+            function <span class="apidocSignatureSpan">core.</span>JsonRpcError
+            <span class="apidocSignatureSpan">(code, message, data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.JsonRpcMethod">module core.JsonRpcMethod</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.JsonRpcMethod.JsonRpcMethod">
+            function <span class="apidocSignatureSpan">core.</span>JsonRpcMethod
+            <span class="apidocSignatureSpan">(request, response, server)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.JsonRpcRequest">module core.JsonRpcRequest</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.JsonRpcRequest.JsonRpcRequest">
+            function <span class="apidocSignatureSpan">core.</span>JsonRpcRequest
+            <span class="apidocSignatureSpan">(id, method, params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.JsonRpcResponse">module core.JsonRpcResponse</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.JsonRpcResponse.JsonRpcResponse">
+            function <span class="apidocSignatureSpan">core.</span>JsonRpcResponse
+            <span class="apidocSignatureSpan">(id, result, error)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Memcache">module core.Memcache</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Memcache.Memcache">
+            function <span class="apidocSignatureSpan">core.</span>Memcache
+            <span class="apidocSignatureSpan">(pool)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.MemcacheAdapter">module core.MemcacheAdapter</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.MemcacheAdapter.MemcacheAdapter">
+            function <span class="apidocSignatureSpan">core.</span>MemcacheAdapter
+            <span class="apidocSignatureSpan">(cp)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Memcached">module core.Memcached</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Memcached.Memcached">
+            function <span class="apidocSignatureSpan">core.</span>Memcached
+            <span class="apidocSignatureSpan">(connection, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.MemcachedSocket">module core.MemcachedSocket</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.MemcachedSocket.MemcachedSocket">
+            function <span class="apidocSignatureSpan">core.</span>MemcachedSocket
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Merge">module core.Merge</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Merge.Merge">
+            function <span class="apidocSignatureSpan">core.</span>Merge
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Message">module core.Message</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Message.Message">
+            function <span class="apidocSignatureSpan">core.</span>Message
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Net">module core.Net</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Net.findFreePort">
+            function <span class="apidocSignatureSpan">core.Net.</span>findFreePort
+            <span class="apidocSignatureSpan">(start, end, hostname, callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Net.getPidByPort">
+            function <span class="apidocSignatureSpan">core.Net.</span>getPidByPort
+            <span class="apidocSignatureSpan">(port, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Pool">module core.Pool</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Pool.Pool">
+            function <span class="apidocSignatureSpan">core.</span>Pool
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Process">module core.Process</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Process.exists">
+            function <span class="apidocSignatureSpan">core.Process.</span>exists
+            <span class="apidocSignatureSpan">(pid, callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.RbmqConfig">module core.RbmqConfig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.RbmqConfig.RbmqConfig">
+            function <span class="apidocSignatureSpan">core.</span>RbmqConfig
+            <span class="apidocSignatureSpan">(data)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.RbmqIncomingMessage">module core.RbmqIncomingMessage</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.RbmqIncomingMessage.RbmqIncomingMessage">
+            function <span class="apidocSignatureSpan">core.</span>RbmqIncomingMessage
+            <span class="apidocSignatureSpan">(body, headers, deliveryInfo, m)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.RbmqMessage">module core.RbmqMessage</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.RbmqMessage.RbmqMessage">
+            function <span class="apidocSignatureSpan">core.</span>RbmqMessage
+            <span class="apidocSignatureSpan">(body, params)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Socket">module core.Socket</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Socket.Socket">
+            function <span class="apidocSignatureSpan">core.</span>Socket
+            <span class="apidocSignatureSpan">(port, host)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Sort">module core.Sort</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Sort.keySort">
+            function <span class="apidocSignatureSpan">core.Sort.</span>keySort
+            <span class="apidocSignatureSpan">(obj)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.core.Url">module core.Url</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.core.Url.Url">
+            function <span class="apidocSignatureSpan">core.</span>Url
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core" id="apidoc.module.core">module core</a></h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.AbstractDecorator" id="apidoc.module.core.AbstractDecorator">module core.AbstractDecorator</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.AbstractDecorator.AbstractDecorator" id="apidoc.element.core.AbstractDecorator.AbstractDecorator">
+        function <span class="apidocSignatureSpan">core.</span>AbstractDecorator
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">AbstractDecorator = function () {
+    EventDispatcher.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.CFMemcache" id="apidoc.module.core.CFMemcache">module core.CFMemcache</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.CFMemcache.CFMemcache" id="apidoc.element.core.CFMemcache.CFMemcache">
+        function <span class="apidocSignatureSpan">core.</span>CFMemcache
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CFMemcache = function (options){
+    Memcache.call(this, options);
+    this._memory = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Class" id="apidoc.module.core.Class">module core.Class</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Class.Class" id="apidoc.element.core.Class.Class">
+        function <span class="apidocSignatureSpan">core.</span>Class
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Class(fn) {
+    var object = fn;
+    //if given constructor is proper and isn't object
+    if (typeof(fn) == 'function') {
+        object = new fn();
+    }
+    if (object.hasOwnProperty('initialize')) {
+        fn = object.initialize;
+        //delete object.initialize // &lt;- hogward - slowing down
+    }
+    else {
+        fn = function () {};
+    }
+    if (object.hasOwnProperty('Extends')) {
+        var SuperConstructor = object.Extends,
+            newPrototype = Object.create(SuperConstructor.prototype);
+        //deleting extends
+        delete object.Extends;
+        //wrap constructor
+        fn = wrap(fn, SuperConstructor);
+        //create new prototype and wrap methods
+        for (var property in object) {
+            //checking if property is own and if it is "initialize" becouse of hogward
+            if (object.hasOwnProperty(property) &amp;&amp; property != 'initialize') {
+                //wrap only when property is a function
+                if (object[property] instanceof Function &amp;&amp; SuperConstructor.prototype[property]) {
+                    newPrototype[property] = wrap(object[property], SuperConstructor.prototype[property]);
+                }
+                else {
+                    newPrototype[property] = object[property];
+                }
+            }
+        }
+        fn.prototype = newPrototype;
+    }
+    else {
+        fn.prototype = object;
+    }
+    delete object;
+    return fn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Compressor" id="apidoc.module.core.Compressor">module core.Compressor</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Compressor.Compressor" id="apidoc.element.core.Compressor.Compressor">
+        function <span class="apidocSignatureSpan">core.</span>Compressor
+        <span class="apidocSignatureSpan">(configuration)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Compressor = function (configuration){
+    this._configuration = configuration;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.ConnectionPool" id="apidoc.module.core.ConnectionPool">module core.ConnectionPool</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.ConnectionPool.ConnectionPool" id="apidoc.element.core.ConnectionPool.ConnectionPool">
+        function <span class="apidocSignatureSpan">core.</span>ConnectionPool
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ConnectionPool = function (options){
+    EventDispatcher.call(this);
+    this._sockets = [];
+    this._knownSockets = [];
+
+    this._callbacks = [];
+    this._options = options;
+    this._connect();
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.CredentialsProvider" id="apidoc.module.core.CredentialsProvider">module core.CredentialsProvider</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.CredentialsProvider.CredentialsProvider" id="apidoc.element.core.CredentialsProvider.CredentialsProvider">
+        function <span class="apidocSignatureSpan">core.</span>CredentialsProvider
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CredentialsProvider = function () {
+    EventDispatcher.call(this);
+    this._currentCredentials = null;
+    if (arguments.length == 1) {
+        this._currentCredentials = arguments[0];
+    } else if (arguments.length &gt; 0) {
+        this._currentCredentials = arguments;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.CursorQueryWorker" id="apidoc.module.core.CursorQueryWorker">module core.CursorQueryWorker</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.CursorQueryWorker.CursorQueryWorker" id="apidoc.element.core.CursorQueryWorker.CursorQueryWorker">
+        function <span class="apidocSignatureSpan">core.</span>CursorQueryWorker
+        <span class="apidocSignatureSpan">(client)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">CursorQueryWorker = function (client) {
+    EventDispatcher.call(this);
+    this._client = client;
+    this._transactionOpened = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.DecoratorChain" id="apidoc.module.core.DecoratorChain">module core.DecoratorChain</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.DecoratorChain.DecoratorChain" id="apidoc.element.core.DecoratorChain.DecoratorChain">
+        function <span class="apidocSignatureSpan">core.</span>DecoratorChain
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DecoratorChain = function () {
+    EventDispatcher.call(this);
+
+<span class="apidocCodeCommentSpan">    /**
+     * Holds currently decorated object
+     * @private
+     */
+</span>    this._decoratedObject = null;
+
+    /**
+     * Holds decorator's method to invoke
+     * @private
+     */
+    this._decoratorMethod = null;
+
+    /**
+     * Holds decorators
+     * @private
+     * @type Array
+     */
+    this._decorators = [];
+
+    /**
+     * Indicates decorator currently processing
+     * @private
+     */
+    this._decorationProgress = 0;
+
+    /**
+     * Indicates current processing phase
+     * @type {String} Posibble values are {@link DecoratorChain.PROCESSING} or {@link DecoratorChain.STOPPED}.
+     */
+    this.currentPhase = DecoratorChain.STOPPED;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.DeviceDetector" id="apidoc.module.core.DeviceDetector">module core.DeviceDetector</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.DeviceDetector.DeviceDetector" id="apidoc.element.core.DeviceDetector.DeviceDetector">
+        function <span class="apidocSignatureSpan">core.</span>DeviceDetector
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">DeviceDetector = function (){}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.EmptyLogger" id="apidoc.module.core.EmptyLogger">module core.EmptyLogger</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.EmptyLogger.EmptyLogger" id="apidoc.element.core.EmptyLogger.EmptyLogger">
+        function <span class="apidocSignatureSpan">core.</span>EmptyLogger
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">EmptyLogger = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.ErrorEvent" id="apidoc.module.core.ErrorEvent">module core.ErrorEvent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.ErrorEvent.ErrorEvent" id="apidoc.element.core.ErrorEvent.ErrorEvent">
+        function <span class="apidocSignatureSpan">core.</span>ErrorEvent
+        <span class="apidocSignatureSpan">(type, data, code, message)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ErrorEvent = function (type, data, code, message) {
+    if(data instanceof ErrorEvent){
+        data = data.toJson();
+    }
+    Event.call(this, type, data);
+    this.code = code;
+    this.message = message;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Event" id="apidoc.module.core.Event">module core.Event</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Event.Event" id="apidoc.element.core.Event.Event">
+        function <span class="apidocSignatureSpan">core.</span>Event
+        <span class="apidocSignatureSpan">(type, data, target)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Event = function (type, data, target) {
+    this.type = type;
+    this.data = data;
+    this.target = target;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.EventDispatcher" id="apidoc.module.core.EventDispatcher">module core.EventDispatcher</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.EventDispatcher.EventDispatcher" id="apidoc.element.core.EventDispatcher.EventDispatcher">
+        function <span class="apidocSignatureSpan">core.</span>EventDispatcher
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">EventDispatcher = function (){
+    this._eventsArray = {};
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Headers" id="apidoc.module.core.Headers">module core.Headers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Headers.Headers" id="apidoc.element.core.Headers.Headers">
+        function <span class="apidocSignatureSpan">core.</span>Headers
+        <span class="apidocSignatureSpan">(headers, normalize)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Headers = function (headers, normalize) {
+    if (headers &amp;&amp; (normalize || Types.isUndefined(normalize))) {
+        this._headers = {};
+        this.normalize(headers);
+    } else {
+        this._headers = headers ? Object.create(headers) : {};
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.JsonRpcAbstract" id="apidoc.module.core.JsonRpcAbstract">module core.JsonRpcAbstract</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.JsonRpcAbstract.JsonRpcAbstract" id="apidoc.element.core.JsonRpcAbstract.JsonRpcAbstract">
+        function <span class="apidocSignatureSpan">core.</span>JsonRpcAbstract
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JsonRpcAbstract = function () {
+    this._jsonrpc = "2.0";
+
+    var args = [].slice.call(arguments, 0);
+
+    if (args.length) {
+        if (args.length == 1) {
+            if (args[0] &amp;&amp; typeof args[0] == 'string' &amp;&amp; args[0].constructor == String) {
+                try {
+                    args = this._parse(JSON.parse(args[0]));
+                } catch (e) {
+                    throw new Error(JsonRpcAbstract.Exceptions.INPROPER_JSON_STRING);
+                }
+            } else if (args[0] &amp;&amp; typeof args[0] == "object" &amp;&amp; args[0].constructor == Object) {
+                try {
+                    args = this._parse(args[0]);
+                } catch (e) {
+                    throw new Error(JsonRpcAbstract.Exceptions.INPROPER_JSON);
+                }
+            }
+        }
+
+        this._init(args);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.JsonRpcBatchRequest" id="apidoc.module.core.JsonRpcBatchRequest">module core.JsonRpcBatchRequest</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.JsonRpcBatchRequest.JsonRpcBatchRequest" id="apidoc.element.core.JsonRpcBatchRequest.JsonRpcBatchRequest">
+        function <span class="apidocSignatureSpan">core.</span>JsonRpcBatchRequest
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JsonRpcBatchRequest = function () {
+    this._items = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.JsonRpcBatchResponse" id="apidoc.module.core.JsonRpcBatchResponse">module core.JsonRpcBatchResponse</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.JsonRpcBatchResponse.JsonRpcBatchResponse" id="apidoc.element.core.JsonRpcBatchResponse.JsonRpcBatchResponse">
+        function <span class="apidocSignatureSpan">core.</span>JsonRpcBatchResponse
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JsonRpcBatchResponse = function (data) {
+    this._items = [];
+    if(data !== undefined) {
+        for (var i = 0; i &lt; data.length; i++) {
+            this._items.push( new JsonRpcResponse(data[i]));
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.JsonRpcError" id="apidoc.module.core.JsonRpcError">module core.JsonRpcError</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.JsonRpcError.JsonRpcError" id="apidoc.element.core.JsonRpcError.JsonRpcError">
+        function <span class="apidocSignatureSpan">core.</span>JsonRpcError
+        <span class="apidocSignatureSpan">(code, message, data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JsonRpcError = function (code, message, data) {
+    this._code = null;
+    this._message = null;
+    this._data = null;
+    JsonRpcAbstract.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.JsonRpcMethod" id="apidoc.module.core.JsonRpcMethod">module core.JsonRpcMethod</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.JsonRpcMethod.JsonRpcMethod" id="apidoc.element.core.JsonRpcMethod.JsonRpcMethod">
+        function <span class="apidocSignatureSpan">core.</span>JsonRpcMethod
+        <span class="apidocSignatureSpan">(request, response, server)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JsonRpcMethod = function (request, response, server) {
+    EventDispatcher.call(this);
+    this._request = request;
+    this._response = response;
+    this.server = server;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.JsonRpcRequest" id="apidoc.module.core.JsonRpcRequest">module core.JsonRpcRequest</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.JsonRpcRequest.JsonRpcRequest" id="apidoc.element.core.JsonRpcRequest.JsonRpcRequest">
+        function <span class="apidocSignatureSpan">core.</span>JsonRpcRequest
+        <span class="apidocSignatureSpan">(id, method, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JsonRpcRequest = function (id, method, params) {
+    this._id = null;
+    this._method = null;
+    this._params = {};
+    JsonRpcAbstract.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.JsonRpcResponse" id="apidoc.module.core.JsonRpcResponse">module core.JsonRpcResponse</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.JsonRpcResponse.JsonRpcResponse" id="apidoc.element.core.JsonRpcResponse.JsonRpcResponse">
+        function <span class="apidocSignatureSpan">core.</span>JsonRpcResponse
+        <span class="apidocSignatureSpan">(id, result, error)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">JsonRpcResponse = function (id, result, error) {
+    this._id = null;
+    this._result = null;
+    this._error = null;
+    JsonRpcAbstract.apply(this, arguments);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Memcache" id="apidoc.module.core.Memcache">module core.Memcache</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Memcache.Memcache" id="apidoc.element.core.Memcache.Memcache">
+        function <span class="apidocSignatureSpan">core.</span>Memcache
+        <span class="apidocSignatureSpan">(pool)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Memcache = function (pool) {
+    this._lifetime = 10;
+    this._kChunkLength = 800 * 1024;
+    this._firstByteTimeout = 1000;
+    this._connectionPool = pool;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.MemcacheAdapter" id="apidoc.module.core.MemcacheAdapter">module core.MemcacheAdapter</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.MemcacheAdapter.MemcacheAdapter" id="apidoc.element.core.MemcacheAdapter.MemcacheAdapter">
+        function <span class="apidocSignatureSpan">core.</span>MemcacheAdapter
+        <span class="apidocSignatureSpan">(cp)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MemcacheAdapter = function (cp) {
+    return MemcacheAdapter.getInstance(cp);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Memcached" id="apidoc.module.core.Memcached">module core.Memcached</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Memcached.Memcached" id="apidoc.element.core.Memcached.Memcached">
+        function <span class="apidocSignatureSpan">core.</span>Memcached
+        <span class="apidocSignatureSpan">(connection, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Memcached = function (connection, options) {
+    var i, socket;
+
+    this._options = options || {};
+    this._options.__proto__ = {
+        poolSize: 10,
+        getOptions: {
+            chunkSize: 800 * 1024,
+            timeout: 1000
+        },
+        setOptions: {
+            chunkSize: 800 * 1024,
+            lifetime: 3600,
+            waitForReply: false
+        },
+        deleteOptions: {
+            waitForReply: false
+        }
+    };
+
+    this._connection = connection;
+
+    this._pool = new Pool();
+
+    for (i = 0; i &lt; this._options.poolSize; i++) {
+        socket = new Socket(connection.port, connection.host);
+        socket._refineHandlers();
+
+        this._pool.add(socket);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.MemcachedSocket" id="apidoc.module.core.MemcachedSocket">module core.MemcachedSocket</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.MemcachedSocket.MemcachedSocket" id="apidoc.element.core.MemcachedSocket.MemcachedSocket">
+        function <span class="apidocSignatureSpan">core.</span>MemcachedSocket
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">MemcachedSocket = function (options) {
+    EventDispatcher.call(this);
+    this._options = options;
+    this._socket = null;
+    this._socketBuffer = [];
+    this._operation = {};
+
+    this._head = null;
+    this._ending = new Buffer("\r\n", "binary");
+    this._ready = false;
+
+    //GLOBAL
+    this._headWritten = false;
+    this._totalSize = 0;
+    this._currentSize = 0;
+    this._currentChunk = 0;
+
+    //SET
+    this._totalChunks = 0;
+    this._doneChunks = 0;
+    this._waitForReplyAttached = false;
+
+    //GET
+    this._buffers = [];
+    this._buffersLength = 0;
+    this._onDataAttached = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Merge" id="apidoc.module.core.Merge">module core.Merge</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Merge.Merge" id="apidoc.element.core.Merge.Merge">
+        function <span class="apidocSignatureSpan">core.</span>Merge
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Merge = function () {
+    var dest = Array.prototype.shift.call(arguments),
+        lastElement = arguments[arguments.length -1],
+        recursive = false,
+        i,
+        l,
+        key;
+
+    if (Types.isBoolean(lastElement)) {
+        recursive = Array.prototype.pop.call(arguments);
+    }
+
+    for (i = 0, l = arguments.length; i &lt; l; i++) {
+        for (key in arguments[i]) {
+            if (Types.isObject(arguments[i][key]) &amp;&amp; recursive) {
+                if (!dest.hasOwnProperty(key)) {
+                    dest[key] = {};
+                }
+
+                dest[key] = Merge(dest[key], arguments[i][key], recursive);
+            } else {
+                dest[key] = arguments[i][key];
+            }
+        }
+    }
+
+    return dest;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Message" id="apidoc.module.core.Message">module core.Message</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Message.Message" id="apidoc.element.core.Message.Message">
+        function <span class="apidocSignatureSpan">core.</span>Message
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Message = function (params) {
+    EventDispatcher.call(this);
+    this.headers = new Headers();
+    this._body = null;
+    this._httpVersion = '1.0';
+    this._cookieKey = 'message-cookie';
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Net" id="apidoc.module.core.Net">module core.Net</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Net.findFreePort" id="apidoc.element.core.Net.findFreePort">
+        function <span class="apidocSignatureSpan">core.Net.</span>findFreePort
+        <span class="apidocSignatureSpan">(start, end, hostname, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findFreePort = function (start, end, hostname, callback) {
+    var pivot = Math.floor(Math.random() * (end - start)) + start, port = pivot;
+    asyncRepeat(function (next, done) {
+        var stream = net.createConnection(port, hostname);
+
+        stream.on("connect", function () {
+            stream.destroy();
+            port++;
+            if (port &gt; end) {
+                port = start;
+            }
+
+            if (port == pivot) {
+                done("Could not find free port.");
+                return;
+            }
+
+            next();
+        });
+
+        stream.on("error", function () {
+            done();
+        });
+    }, function (err) {
+        callback(err, port);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.core.Net.getPidByPort" id="apidoc.element.core.Net.getPidByPort">
+        function <span class="apidocSignatureSpan">core.Net.</span>getPidByPort
+        <span class="apidocSignatureSpan">(port, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getPidByPort = function (port, callback) {
+    child_process.exec("netstat -nltp", function (error, stdout, stderr) {
+        if (error) {
+            callback(error);
+            return;
+        }
+        var re = new RegExp(":" + port + ".*LISTEN +(\\d+)");
+        var pid = re.exec(stdout);
+
+        if (!pid) {
+            callback(-2);
+            return;
+        }
+
+        callback(null, parseInt(pid[1]));
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Pool" id="apidoc.module.core.Pool">module core.Pool</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Pool.Pool" id="apidoc.element.core.Pool.Pool">
+        function <span class="apidocSignatureSpan">core.</span>Pool
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Pool = function () {
+    this._spareObjects = [];
+    this._knownObjects = [];
+    this._markedForDeletion = [];
+    this._waitingCallbacks = [];
+    this._queued = 0;
+    this._maxQueued = null;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Process" id="apidoc.module.core.Process">module core.Process</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Process.exists" id="apidoc.element.core.Process.exists">
+        function <span class="apidocSignatureSpan">core.Process.</span>exists
+        <span class="apidocSignatureSpan">(pid, callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">exists = function (pid, callback) {
+<span class="apidocCodeCommentSpan">    /* platform dependent ? */
+</span>    var prefix = '/proc';
+
+    var process_path = path.join(prefix, String(pid));
+
+    fs.stat(process_path, function (err, stats) {
+        if (!err) {
+            callback(true);
+        } else {
+            callback(false);
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.RbmqConfig" id="apidoc.module.core.RbmqConfig">module core.RbmqConfig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.RbmqConfig.RbmqConfig" id="apidoc.element.core.RbmqConfig.RbmqConfig">
+        function <span class="apidocSignatureSpan">core.</span>RbmqConfig
+        <span class="apidocSignatureSpan">(data)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RbmqConfig = function (data) {
+    this.initialize(data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.RbmqIncomingMessage" id="apidoc.module.core.RbmqIncomingMessage">module core.RbmqIncomingMessage</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.RbmqIncomingMessage.RbmqIncomingMessage" id="apidoc.element.core.RbmqIncomingMessage.RbmqIncomingMessage">
+        function <span class="apidocSignatureSpan">core.</span>RbmqIncomingMessage
+        <span class="apidocSignatureSpan">(body, headers, deliveryInfo, m)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function RbmqIncomingMessage(body, headers, deliveryInfo, m) {
+    var data = deliveryInfo;
+
+    // node-amqp parse text/json and application/json. Otherwise returns { data: Buffer(...), contentType: ... } structure
+    if (deliveryInfo.contentType != 'text/json' &amp;&amp; deliveryInfo.contentType != 'application/json') {
+        body = body.data;
+    }
+
+    this._m = m;
+    this._completed = false;
+
+    RbmqMessage.call(this, body, data);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.RbmqMessage" id="apidoc.module.core.RbmqMessage">module core.RbmqMessage</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.RbmqMessage.RbmqMessage" id="apidoc.element.core.RbmqMessage.RbmqMessage">
+        function <span class="apidocSignatureSpan">core.</span>RbmqMessage
+        <span class="apidocSignatureSpan">(body, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">RbmqMessage = function (body, params) {
+    EventDispatcher.call(this);
+
+    this._body = body;
+    this._data = {};
+
+    if (params &amp;&amp; typeof params == 'object' &amp;&amp; params.constructor == Object) {
+        var methodName, key, value;
+        for (key in RbmqMessage.Attributes) {
+
+            if (params.hasOwnProperty(key)) {
+                value = params[key];
+            } else {
+                value = RbmqMessage.Attributes[key];
+            }
+
+            methodName = key.charAt(0).toUpperCase() + key.substr(1);
+
+            if (typeof this['set' + methodName] == 'function') {
+                RbmqMessage.prototype['set' + methodName].call(this, value);
+            }
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Socket" id="apidoc.module.core.Socket">module core.Socket</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Socket.Socket" id="apidoc.element.core.Socket.Socket">
+        function <span class="apidocSignatureSpan">core.</span>Socket
+        <span class="apidocSignatureSpan">(port, host)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Socket = function (port, host) {
+    this._data = [];
+    this._listeners = ['connect', 'data', 'end', 'timeout', 'drain', 'error', 'close'];
+    this._hasReconnected = false;
+    this._drained = true;
+    this._connected = false;
+
+    this._c = null;
+
+    this._port = port;
+    this._host = host;
+    this._socket = Net.createConnection(port, host);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Sort" id="apidoc.module.core.Sort">module core.Sort</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Sort.keySort" id="apidoc.element.core.Sort.keySort">
+        function <span class="apidocSignatureSpan">core.Sort.</span>keySort
+        <span class="apidocSignatureSpan">(obj)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keySort = function (obj) {
+    var keys = Object.keys(obj).sort();
+    var data = {};
+    var key;
+
+    for (var i = 0, l = keys.length; i &lt; l; i++) {
+        key = keys[i];
+
+        if (Types.isObject(obj[key])) {
+            data[key] = keySort(obj[key]);
+        } else {
+            data[key] = obj[key];
+        }
+    }
+
+    return data;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.core.Url" id="apidoc.module.core.Url">module core.Url</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.core.Url.Url" id="apidoc.element.core.Url.Url">
+        function <span class="apidocSignatureSpan">core.</span>Url
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">Url = function () {}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
